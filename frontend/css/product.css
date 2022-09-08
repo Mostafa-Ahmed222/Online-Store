@@ -1,0 +1,164 @@
+/* Start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  scroll-behavior: smooth;
+  transition: 4s;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End global rules */
+/* start header */
+.container.head {
+  display: flex;
+  justify-content: space-between;
+}
+ul, p {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.active {
+  color: #fd7d31;
+}
+li:hover,
+p:hover {
+  color: #fd7d31;
+  transition: 100ms;
+}
+/* end header */
+body {
+  background-image: linear-gradient(to bottom, blue, #83a7bd, teal);
+  background-repeat: no-repeat;
+}
+.product-home {
+  min-height: 86.7vh;
+}
+.add-product {
+  margin: 40px;
+}
+/* input */
+#add-p,
+#update-p {
+  background-color: teal;
+  border: 3px solid #1a1a1a;
+  box-shadow: 1px 7px 10px 1px black;
+}
+#update-p {
+  display: none;
+}
+.input {
+  display: grid;
+  grid-template-columns: 179px 1fr;
+  align-items: center;
+  margin: 15px;
+  gap: 10px;
+}
+label {
+  font-weight: bold;
+  background-color: #83a7bd;
+  padding: 7px;
+  text-align: center;
+  box-shadow: 3px 7px 20px 1px black;
+}
+.form {
+  padding: 7px;
+  outline-color: teal;
+  background-color: teal;
+  border: none;
+  font-weight: bold;
+  color: white;
+  box-shadow: 3px 7px 20px 1px black;
+}
+.form::placeholder {
+  color: white;
+  text-align: center;
+  display: flex;
+  font-weight: 100;
+  opacity: 0.7;
+}
+/* table */
+table {
+  width: 100%;
+  margin: 20px auto;
+  border-spacing: 3px;
+}
+tr {
+  width: 100%;
+}
+th {
+  background-color: #83a7bd;
+  padding: 10px;
+  margin: 10px;
+  border: 5px solid black;
+  outline: none;
+}
+td {
+  background-color: teal;
+  border: 3px solid #1a1a1a;
+  text-align: center;
+  padding: 6px;
+  color: white;
+  font-weight: bold;
+}
+.btn {
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+.btn-danger {
+  background-color: red;
+}
+.btn-success {
+  background-color: darkblue;
+}
+/* Start Footer */
+.footer {
+  background-color: #83a7bd;
+  padding: 30px 10px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+.footer span {
+  color: #fd7d31;
+  font-weight: bold;
+}
+/* End Footer */

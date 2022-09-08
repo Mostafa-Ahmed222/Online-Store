@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>products</title>
+    <!-- render all elements css style -->
+    <link rel="stylesheet" href="Css/normalize.css" />
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="Css/all.min.css" />
+    <!-- main css style -->
+    <link rel="stylesheet" href="Css/product.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="product-home">
+      <header>
+        <div class="container head">
+          <ul>
+            <li>Home</li>
+            <li>User</li>
+            <li class="active">Product</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact Us</li>
+          </ul>
+          <p id="logout">Logout</p>
+        </div>
+      </header>
+      <div class="container">
+        <div class="add-product">
+          <div class="input">
+            <label for="">Product Name</label>
+            <input
+              class="form"
+              type="text"
+              id="name"
+              placeholder="Enter Your Product Name please......."
+            />
+          </div>
+          <div class="input">
+            <label for="">Product Price</label>
+            <input
+              class="form"
+              type="text"
+              id="price"
+              placeholder="Enter Your Product Price please......."
+            />
+          </div>
+          <div class="input">
+            <label for="">Product Description</label>
+            <textarea
+              class="form"
+              type="text"
+              id="description"
+              placeholder="Enter Your Product Description please......."
+            ></textarea>
+          </div>
+          <button class="btn" id="add-p">Add Product</button>
+          <button class="btn" id="update-p">Update Product</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Description</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Start Footer -->
+    <div class="footer">
+      &copy; 2022 <span>Developer</span> All Right Reserved
+    </div>
+    <!-- End Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/product.js"></script>
+  </body>
+</html>

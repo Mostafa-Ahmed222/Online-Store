@@ -1,0 +1,174 @@
+/* Start global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End global rules */
+/* start header */
+ul {
+  display: flex;
+    gap: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.active {
+  color: #fd7d31;
+}
+li:hover {
+  color: #fd7d31;
+  transition: 100ms;
+
+}
+/* end header */
+.home {
+  background-image: url("../media/ecommerce-wallpapers-105687-1052314-2046661.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.home .container {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+label {
+  color: black;
+  font-weight: bold;
+}
+input {
+  background-color: transparent;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  outline: none;
+  border: #fd7d31 2px solid;
+  margin: 20px;
+  outline: none;
+  padding: 5px;
+}
+button {
+  height: 60px;
+  width: 60px;
+  background-color: blue;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+.login,
+.signup {
+  background-color: #83a7bd;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 10px;
+  position: relative;
+}
+.login {
+  height: 60%;
+  width: 50%;
+  transform: translate(55%, 50%);
+  display: none;
+}
+.signup {
+  transform: translate(95%, -24px);
+  display: none;
+}
+.login::before,
+.signup::before {
+  content: "";
+  position: absolute;
+  border-width: 20px;
+  border-style: solid;
+  border-color: #fd7d31 transparent transparent;
+  bottom: -40px;
+  right: 45%;
+}
+.signup::before {
+  right: 44%;
+}
+.mail,
+.pass,
+#username,
+#userage,
+.usermail,
+.userphone,
+.userpass {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
+.btn1,
+.btn2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+#login,
+#signup {
+  background-color: #fd7d31;
+}
+a {
+  text-decoration: none;
+  color: #fd7d31;
+  position: absolute;
+  font-weight: bold;
+  font-size: 30px;
+}
+.li {
+  top: 50%;
+  left: 50%;
+  transform: translate(0px, 50px);
+}
+.su {
+  top: 54%;
+  left: 50%;
+  transform: translate(0px, 100px);
+}
+/* Start Footer */
+.footer {
+  background-color: #83a7bd;
+  padding: 30px 10px;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+.footer span {
+  color: #fd7d31;
+  font-weight: bold;
+}
+/* End Footer */
