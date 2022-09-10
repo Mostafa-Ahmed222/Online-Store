@@ -50,18 +50,30 @@ export const getById = (req, res, next) => {
     }
   );
 };
-export const getProductById = (req, res, next) => {
+export const searchProductOfUser = (req, res, next) => {
+  const { key } = req.query;
   const { id } = req.params;
   sql.execute(
-    `select * from products where id = ${id}`,
+    `select d.username, p.* from developers as d inner join products as p on 
+  d.id = p.devid where d.id = ${id} and p.name like '${key}%'`,
     (err, result) => {
       if (err) {
-        res.json({ message: "Query Error", err });
+        res.json({ message: "query error", err });
       } else {
-        res.json({ message: "Done", result });
+        res.json({message : "Done", result})
       }
     }
   );
+};
+export const getProductById = (req, res, next) => {
+  const { id } = req.params;
+  sql.execute(`select * from products where id = ${id}`, (err, result) => {
+    if (err) {
+      res.json({ message: "Query Error", err });
+    } else {
+      res.json({ message: "Done", result });
+    }
+  });
 };
 export const deleteProduct = (req, res, next) => {
   const { id } = req.params;
